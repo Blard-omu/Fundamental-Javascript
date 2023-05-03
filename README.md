@@ -1,10 +1,11 @@
-### March-Weekday-Javascript
+
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHbxcG91qCsggbBq6l_sCNQW3aL0lO2uLJqzMKkGFbJupxoeXjmoaOcxoMBQn5XPoVeJk&usqp=CAU" width="100%" >
 
-# Window object, alert, prompt, and console
-# Variables: var, let , const, variable scope
-# Data types: string, number, boolean, Null, Undefined, object, array, etc
+## OUTLINE
+- Window object, alert, prompt, and console
+-Variables: var, let , const, variable scope
+-Data types: string, number, boolean, Null, Undefined, object, array, etc
 # String Methods: length, toUpperCase, toLowerCase, indexOf, concat, slice, split, replace etc
 # Numbers and Math methods: Math.Max, Math.Min, Math.random, Math.floor, Math.ceil
 # Operators: arithmetic, assignment, logical, comparison
