@@ -4,8 +4,8 @@
 
 ## OUTLINE
 - Window object, alert, prompt, and console
--Variables: var, let , const, variable scope
--Data types: string, number, boolean, Null, Undefined, object, array, etc
+- Variables: var, let , const, variable scope
+- Data types: string, number, boolean, Null, Undefined, object, array, etc
 # String Methods: length, toUpperCase, toLowerCase, indexOf, concat, slice, split, replace etc
 # Numbers and Math methods: Math.Max, Math.Min, Math.random, Math.floor, Math.ceil
 # Operators: arithmetic, assignment, logical, comparison
