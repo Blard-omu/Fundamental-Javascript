@@ -1,6 +1,6 @@
 ### March-Weekday-Javascript
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHbxcG91qCsggbBq6l_sCNQW3aL0lO2uLJqzMKkGFbJupxoeXjmoaOcxoMBQn5XPoVeJk&usqp=CAU" width="100" >
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHbxcG91qCsggbBq6l_sCNQW3aL0lO2uLJqzMKkGFbJupxoeXjmoaOcxoMBQn5XPoVeJk&usqp=CAU" width="100%" >
 
 # Window object, alert, prompt, and console
 # Variables: var, let , const, variable scope
