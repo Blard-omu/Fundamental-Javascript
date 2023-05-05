@@ -17,6 +17,7 @@
 - Functions: function declarations, function expressions, Arrow functions, Calling & Hoisting, Local/Global scope.
 - ES6 Features: rest and spread operators, ternary operator, Arrow functions, destructuring of arrays and objects, importing and exporting of files/modules, etc.
 - Date Methods: Date.getDate, Date.getFullYear(), Date.getMonth(), Date.getDay(), Date.getHours(), Date.getMinutes, etc.
+-setTimeout, setTimeInterval
 - Promises: Synchronous and asynchronous process, asyn/await, etc.
 - OOP: Classes, constructor function, prototype inheritance, etc.
 - DOM: selecting DOM elements, changing DOM properties, creating DOM elements, event listener, etc.

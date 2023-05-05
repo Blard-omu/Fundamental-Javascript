@@ -322,7 +322,6 @@ if (isAuth && pass.length < 8){
 }else if (pass.includes("@") || pass.includes("#") && pass.length > 10){
     console.log("Very strong password!");
 }
-
 // Task 5
 // Create a variables called acctBal, atmPin. Using simple conditional statements, write a code that logs the following:
 // a) if user is authenticated, and atnPin is correct, it should log the message "Transaction successful! Your account balance is ----"
@@ -334,8 +333,170 @@ const atmPin = "123#"
 if (userName === "user" && atmPin === "123#"){
     console.log(`Transaction successfully! Account: ${acctBal}`);
 }else{
-    console.log("Transaction failed! You're a scammer!!");
+    console.log("Transaction failed!");
 }
+
+// Switch statement 
+const caseValue = null;
+switch (caseValue){
+    case 1:
+        // run this code 1
+        break
+    case 2:
+        // run this code 2
+        break
+    case 3:
+        // run this code 3
+        break
+    default:
+        // run default code
+}
+
+// Example
+// let userInput = prompt('What day is today?')
+// let day = userInput.toLowerCase()
+// console.log(userInput, day);
+// switch (day) {
+//     case 'sunday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'monday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'tuesday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'wednesday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'thursday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'friday':
+//         console.log(`Today is ${day}`);
+//         break
+//     case 'saturday':
+//         console.log(`Today is ${day}`);
+//         break
+//     default:
+//         console.log("Invalid entry");
+// }
+// @BLARD_CODES
+
+// Task 6
+// Using switch create a banking system that authenticate user, deposits, withdraws and checkbalance.
+
+// let ourInput = prompt("Enter PIN or username")
+// let loginPin = ourInput.toLowerCase();
+// console.log(ourInput, loginPin);
+// let accName = "Blard"
+// let deposit = "deposit";
+// let withdraw = "withdraw";
+// let checkbalance = "balance";
+// let myAcctBal = 1000;
+// if(loginPin == 1234 || loginPin == "admin"){
+//        let action = prompt("What would you like to do?").toLowerCase();
+//        switch(action) {
+//             case "deposit":
+//                 // console.log("Deposit");
+//                 let depAmt = Number(prompt("Enter amount to deposit"))
+//                 // myAcctBal = myAcctBal + depAmt;
+//                 myAcctBal += depAmt;
+//                 console.log(`Your new account balance is:  $${myAcctBal}`);
+//                 break
+//             case "withdraw":
+//             // console.log("Withdraw");
+//                 let withdrwAmt = Number(prompt("Enter amount to withdraw"))
+//                 myAcctBal -= withdrwAmt
+//                 console.log(`You withrew: $${withdrwAmt}\nYour new account balance is: $${myAcctBal}`);
+//                 break
+//             case "balance":
+//             console.log("Checkbalance");
+//                     console.log(`Your account balance is: $${myAcctBal}`);
+//                 break
+//             default:
+//                 console.log("something went wrong");
+//        }  
+// }else{
+//     console.log("Wrong PIN or Username");
+// }
+
+// Ternary Operator
+// syntax:
+// condition ? run_this_code_1 : run_this_code_2
+
+// Using Ternary Operator
+// !isAuth ? console.log("You are authorized") : console.log("You are not authorized");
+// let action = prompt("What would you like to do?").toLowerCase();
+
+// (loginPin == 1234 || loginPin == "admin") ? console.log("You're logged in") : console.log("Login Failed");
+
+
+// Arrays
+const myNewArr = [
+    3,
+     true,
+      "apple",
+       null,
+        undefined,
+         {key1: "value1", key2: "value2"},
+          [1, 2, 3],
+           "Okiki"
+        ]
+
+// Accessing array items
+console.log(myNewArr[3]); //null
+const firstItem = myNewArr[0] //3
+const indexOflastItem = myNewArr.length - 1 // 
+console.log(myNewArr[indexOflastItem]);
+
+// modifying Arrays
+console.log(myNewArr);
+myNewArr[4] = "defined"
+console.log(myNewArr);
+
+// unshift() or push() for adding one item at beginning and at end r.p.t
+myNewArr.unshift("newItem")
+console.log(myNewArr);
+myNewArr.push("lastItem")
+console.log(myNewArr);
+
+// shift and pop
+myNewArr.shift();
+console.log(myNewArr);
+myNewArr.pop();
+console.log(myNewArr);
+
+// splice()
+// Arr.splice(startIndex, delNumItems, addNumItems)
+const splicedArr = myNewArr.splice(0, 3)
+console.log(splicedArr); //returns deleted items
+console.log(myNewArr);
+myNewArr.splice(0, 0, "banana", 10, "Orange")
+console.log(myNewArr);
+
+// more example
+let arr = ["Blard", "is", "a", "programmer"];
+console.log(arr); //["Blard", "is", "a", "programmer"]
+
+arr.splice(1, 2);
+console.log(arr); //["Blard", "programmer"]
+
+let Arr = ["I", "am", "eating", "right", "now"];
+Arr.splice(2, 1, "learning", "javascript", "and", "react");
+console.log(Arr);
+
+Arr.splice(3, 0, "advance");
+console.log(Arr);
+
+// Task
+// From index 3 of myNewArr, delete 2 items and add 2 items
+
+
+
+
+
+
 
 
 
