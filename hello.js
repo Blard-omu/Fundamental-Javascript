@@ -491,16 +491,207 @@ console.log(Arr);
 
 // Task
 // From index 3 of myNewArr, delete 2 items and add 2 items
+// Solution
+console.log(myNewArr);
+console.log(myNewArr.splice(3, 2, "advance", "modern"));
+console.log(myNewArr);
+
+// slice(start, end)
+let slicedArr = myNewArr.slice(3, 7)
+console.log(slicedArr);
+
+// join()
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers);
+console.log(numbers.join());
+console.log(numbers.join("-"));
+
+// reverse()
+console.log(numbers.reverse());
+
+// sort()
+let mNum = [20, 40, 5, 30, 15, 98, 70, 2]
+let alph = ["Zebra", "Orange", "Apple", "Banana"]
+console.log(alph.sort());
+
+// Mon 8th May 2023
+// Loops for, while, for-of, do-while
+console.log("This looping ....");
+console.log("This looping ....");
+console.log("This looping ....");
+console.log("This looping ....");
+console.log("This looping ....");
+console.log("This looping ....");
+console.log("This looping ....");
+
+// for
+// for(condition){
+//     run this code
+// }
+
+// for(initializer, condition, increment/decrement){
+//     block of code
+// }
+for(let i = 1; i <= 12; i++){
+    // if(i == 5){
+    //     continue
+    //     break
+    // }
+    console.log(`${i} X ${12} = ${i * 12}`);
+} 
+
+console.log("//////////While loop////////");
+// while
+let n;
+while(n <= 12){
+    console.log(`${n} X ${12} = ${n * 12}`);
+    n++;
+}
+
+// do-while
+let k = 1;
+do{
+    console.log(`${k} X ${12} = ${k * 12}`);
+    k++;
+}while(k <= 12);
+
+// for-of
+for (const element of arr) {
+    // code goes here
+  }
 
 
+// Class Activity
+let marks = [1, 5, 3, 2, 7, 4, 6, 8, 10,9]
+const evenNum = []
+for(let i = 0; i < marks.length; i++){
+    if(marks[i] % 2 == 0){
+        evenNum.push(marks[i]);
+    }
+}
+console.log(evenNum);
+
+// using while loop
+console.log(marks[9]); // 9
+let newMarks = [];
+let markLength = marks.length;
+while(markLength != 0){
+    if(marks[markLength] % 2 == 0){
+        newMarks.push(marks[markLength])
+    }
+    markLength --;       
+}
+console.log(newMarks);
+
+// using for-of
+console.log("/////////for-of////////");
+for (const num of marks) {
+    console.log(num)
+  }
+// using filter()
+  let filtered = marks.filter((even) => even % 2 ==0)
+  console.log(filtered);
+
+//   Functions 
+// Fn is a block of code written to perform a specific task
+// Naming function
+// getName()
+// updatePost()
+// createUser()
+// handleLogin()
+// fetchData()
+// myFunction2() //wrong naming
+
+// creating functions
+// Function declaration
+// Function expression
+// Arrow function
+// Anonymous function
+
+// function declaration
+// function sampleFunction(){
+//     write some code here
+// }
+// Hoisting
+sampleFunction()
+function sampleFunction(){
+    console.log("This is function declaration...");
+}
+
+// calling of function
+// sampleFunction();
+// sampleFunction();
+// sampleFunction();
+// sampleFunction();
+// sampleFunction();
 
 
+// Function expression
+// const sampleFunction = function (){
+//      write some code here
+// }
+
+// sampleFunction2() // function can not be hoisted
+const sampleFunction2 = function(){
+    console.log("This is function expression...");
+}
+sampleFunction2();
+sampleFunction2();
+sampleFunction2();
+
+// Arrow function
+// let myFunction = ()=>{
+//     // write some code here
+// }
+// myArrowFunction()
+let myArrowFunction = ()=>{
+    console.log("This is arrow function ...")
+}
+myArrowFunction()
+myArrowFunction()
+myArrowFunction()
+
+// Function parameters and arguments
+function greetingFunction (fname="Stranger", lname="Alien"){
+    console.log(`Hello ${fname} ${lname}`);
+}
+greetingFunction("Blard", "Okiki")
+
+const addNum = (a, b)=>{
+
+    return a + b;
+}
+console.log(addNum(2, 6));
+console.log(addNum(67, 6));
+console.log(addNum(2, 43));
+
+console.log("////////////");
+function addNum2 (...args) {
+    let sum = 0
+    for (let i = 0; i < args.length; i++){
+        sum += args[i];
+    }
+    console.log(sum);
+}
+addNum2(1, 3, 5, 6,6)
 
 
+// Task 7
+const country = ["Zimbabwe", "Togo", "Ghana", "Sudan", "Uk", "Spain"]
+const fruits = ["Guava", "Lime", "Apple", "Pawpaw", "Banana"]
 
-
-
-
-
+// creating the function
+const changeToUpperSort = (arr) => {
+  let newCountry = []
+  for (const element of arr) {
+    newCountry.push(element.toUpperCase())
+  }
+  // console.log(newCountry.sort());
+  newCountry = newCountry.sort()
+  console.log(newCountry);
+}
+// Involking the function
+changeToUpperSort(country)
+changeToUpperSort(fruits)
 
 

@@ -10,7 +10,7 @@
 - Numbers and Math methods: Math.Max, Math.Min, Math.random, Math.floor, Math.ceil
 - Operators: arithmetic, assignment, logical, comparison
 - Conditionals: if, if-else, else-if-else, switch, ternary operator
-- Array methods: lenth, indexOf, push, pop, unShift, shift, join, slice, splice, clear, del.
+- Array methods: lenth, indexOf, push, pop, unShift, shift, join, slice, splice.
 - Loops: for, while, do-while, for-in
 - Higher Order Array methods: forEach, map, filter, reduce
 - Objects: creating and accessing objects using dot-method/sq-bracket, creating object-method, modifying objects, objects-method (Object.values, Object.keys, Object.assign, etc), looping through objects.
