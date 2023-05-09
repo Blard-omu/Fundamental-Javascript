@@ -13,8 +13,8 @@
 - Array methods: lenth, indexOf, push, pop, unShift, shift, join, slice, splice.
 - Loops: for, while, do-while, for-in
 - Higher Order Array methods: forEach, map, filter, reduce
-- Objects: creating and accessing objects using dot-method/sq-bracket, creating object-method, modifying objects, objects-method (Object.values, Object.keys, Object.assign, etc), looping through objects.
 - Functions: function declarations, function expressions, Arrow functions, Calling & Hoisting, Local/Global scope.
+- Objects: creating and accessing objects using dot-method/sq-bracket, creating object-method, modifying objects, objects-method (Object.values, Object.keys, Object.assign, etc), looping through objects.
 - ES6 Features: rest and spread operators, ternary operator, Arrow functions, destructuring of arrays and objects, importing and exporting of files/modules, etc.
 - Date Methods: Date.getDate, Date.getFullYear(), Date.getMonth(), Date.getDay(), Date.getHours(), Date.getMinutes, etc.
 -setTimeout, setTimeInterval
