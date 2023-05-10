@@ -17,7 +17,7 @@ const person = {
 // foodList array
 let foodList = ["Amala", "Agbado", "Ewa"]
 
-const  data = [
+const  companies = [
         {id: 1,
         company: "B-tech",
         category: "IT",
@@ -49,4 +49,5 @@ const  data = [
         to: 2023}, 
     ];
     
-export {person, otherData}
+export {person, companies, foodList}
+

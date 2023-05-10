@@ -732,10 +732,10 @@ console.log(rectangle.area()); // 200cm^2
 //         return `Hi, my name is ${this.firstName} ${this.lastName}\nI live in ${this.country}, I am ${this.age} years old\nI have very good knowledge of ${this.skills}.\n${this.status}`
 //     }
 // }
-
-import {otherData, person} from "./module.js"
-console.log(otherData);
+import { companies, person, foodList } from "./module.js";
+console.log(companies);
 console.log(person);
+console.log(foodList);
 
 console.log(person.getDetails());
 // creating new property
@@ -785,13 +785,76 @@ for(const keys in person){
 }
 
 // import todoList from data.js
-import {toDoList} from "./data.js"
+import {toDoList, anodaFile} from "./data.js"
 console.log(toDoList);
+console.log(anodaFile);
 
-// 
-toDoList.map((item)=>{
-    console.log(item.id, item.text);
+// Higher Order Array functions map, filter, find, forEach, reduce, some, every, sort
+// map()
+// const callbackFunction = (item)=>console.log(item.id, item.text)
+// toDoList.map(callbackFunction)
+const mappedList = toDoList.map(function(item){
+    return `Item: ${item.id} is ${item.text}`
 })
+console.log(mappedList);
+
+
+// To filter out completedTask
+const completedTask = toDoList.filter((item)=>{
+    return item.isDone
+})
+let mapHelper = completedTask.map((item)=>`${item.text} ${item.time}`)
+console.log(mapHelper); // text, time in an array
+mapHelper.forEach((item)=>console.log(item)); // each items separately 
+
+// forEach
+toDoList.forEach((item, index, arr)=>{
+    // console.log(item.text, index, arr);
+})
+
+// find
+const prices = [23, 22, 25, 32, 22, 98]
+const findPrice = prices.find((price)=> price > 25)
+console.log(findPrice); //32
+
+const students = ['Nathan', 'Eddy', 'Seun', 'Enny', 'Mubarak']
+const longName = students.find((student)=> student.length > 6)
+console.log(longName.toUpperCase());
+
+
+// reducer
+// arrName.reduce((acc, cur)=>{
+// acc = acc + cur
+// }, initialValue)
+const addPrices = prices.reduce((acc, curr)=> acc + curr, 0)
+console.log(addPrices);
+
+
+
+// Task 8
+// Using the companies data from "./data.js", find the company or companies that have existed for more than 15 years. log tho the console the company's name and years of existence.
+
+// Task solution
+console.log(companies); //Note that companies have been imported in line 735
+
+//step 1
+const filteredCompanies = companies.filter(company => {
+    const yearsOfExistence = company.to - company.from;
+    return yearsOfExistence >= 15;
+});
+console.log(filteredCompanies);
+
+//step 2
+const answer = filteredCompanies.map(company => {
+    return `${company.company} has existed for ${company.to - company.from}`
+});
+console.log(answer); //returns an array 
+
+//step 3
+answer.forEach(company => console.log(company)); //returns string representation
+
+
+
 
 
 
