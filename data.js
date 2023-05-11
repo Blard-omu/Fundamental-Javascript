@@ -25,5 +25,10 @@ export const toDoList = [
     time: "7:00pm",
     isDone: false},
 ]
-export let anodaFile = ["anoda.json", "anoda"]
+export let anodaFile = ["json", "anoda", "css", "django"]
+
+const [first, second, ...rest] = anodaFile
+console.log(first); //json
+console.log(rest);
+
 

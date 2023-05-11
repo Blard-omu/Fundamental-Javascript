@@ -764,6 +764,10 @@ console.log(ObjAdd);
 const copyPerson = Object.assign({}, person)
 console.log(copyPerson);
 copyPerson.hobby = "Gaming" // hobby is only added to 'copyPerson' object
+const directCopy = person
+console.log(directCopy);
+directCopy.club = "Man City";
+
 
 // Object.keys() is used to get all the keys in an object
 const keys = Object.keys(copyPerson)
@@ -789,7 +793,10 @@ import {toDoList, anodaFile} from "./data.js"
 console.log(toDoList);
 console.log(anodaFile);
 
+
+// Wednesday 10th May 2023
 // Higher Order Array functions map, filter, find, forEach, reduce, some, every, sort
+
 // map()
 // const callbackFunction = (item)=>console.log(item.id, item.text)
 // toDoList.map(callbackFunction)
@@ -813,7 +820,7 @@ toDoList.forEach((item, index, arr)=>{
 })
 
 // find
-const prices = [23, 22, 25, 32, 22, 98]
+const prices = [23, 100, 22, 25, 32, 22, 98, 10, -3]
 const findPrice = prices.find((price)=> price > 25)
 console.log(findPrice); //32
 
@@ -829,10 +836,12 @@ console.log(longName.toUpperCase());
 const addPrices = prices.reduce((acc, curr)=> acc + curr, 0)
 console.log(addPrices);
 
-
+// prices.reduce(function(acc, curr){
+//     acc = acc + curr
+// }, 0)
 
 // Task 8
-// Using the companies data from "./data.js", find the company or companies that have existed for more than 15 years. log tho the console the company's name and years of existence.
+// Using the companies data from "./data.js", find the company or companies that have existed for more than 15 years. log to the console the company's name and years of existence.
 
 // Task solution
 console.log(companies); //Note that companies have been imported in line 735
@@ -840,18 +849,115 @@ console.log(companies); //Note that companies have been imported in line 735
 //step 1
 const filteredCompanies = companies.filter(company => {
     const yearsOfExistence = company.to - company.from;
-    return yearsOfExistence >= 15;
+    return yearsOfExistence < 10;
 });
 console.log(filteredCompanies);
 
 //step 2
-const answer = filteredCompanies.map(company => {
-    return `${company.company} has existed for ${company.to - company.from}`
+const answer = filteredCompanies.map(comp => {
+    return `${comp.company} has existed for ${comp.to - comp.from}`
 });
 console.log(answer); //returns an array 
 
 //step 3
-answer.forEach(company => console.log(company)); //returns string representation
+answer.forEach(item => console.log(item)); //returns string representation
+
+// // To filter company with same category
+// let searchResult = prompt('Search category')
+// const categorySearch = companies.filter((company)=>{
+//     const category = company.category
+//     return category == searchResult.toLowerCase()
+// })
+// // console.log(categorySearch);
+// categorySearch.forEach(item => console.log(`Company name: ${item.company} Category: ${item.category.toUpperCase()}`))
+
+// sort()
+console.log(students);
+const sortedStudents = students.sort()
+console.log(sortedStudents);
+
+// sorting array of numbers
+console.log(prices);
+prices.sort((a, b) =>{
+    return a - b;
+})
+console.log(prices);
+
+// let anodaFile = ["json", "anoda", "css", "django"]
+
+let [first2, second2, ...rest2] = anodaFile
+console.log(first2); //json
+console.log(rest2[0]); //css
+
+// setTimeout(callback, timeOut)
+console.log('/////////');
+
+// console.log('Before setTimeOut');
+// setTimeout(()=>{
+//     console.log("SetTimeout is finally out!");
+// }, 5000)
+// console.log('After setTimeOut');
+
+// setTimeInterval
+
+// const myInterval = setInterval(function(){
+//     alert('You have to login to continue')
+// }, 5000);
+
+
+// const stopInterval = ()=>{
+//     clearInterval(myInterval);
+// }
+
+// stopInterval()
+
+// Promises
+// creating a promise
+// syntax:
+// const promise = new Promise((resolve, reject)=>{
+//     resolve('promise fulfilled');
+//     reject('promise rejected');
+// })
+
+const doPromise = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        const sports = ["Tennis", "Soccer", "Judo"]
+        if(sports.length > 0){
+            resolve(sports)
+        }else{
+            reject('Something went wrong')
+        }
+    }, 8000)
+})
+console.log("Outside promise");
+doPromise
+    .then((result)=>{
+        console.log(result);
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+
+    // 
+    const sqNum = async function(n){
+         return n*n
+    }
+
+    const result2 = await sqNum(8);
+    console.log(result2);
+
+
+// Fetch API
+// fetch using promises
+// fetch using async await
+
+const url = 'https://restcountries.com/v2/all'
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => console.error(error))
 
 
 
