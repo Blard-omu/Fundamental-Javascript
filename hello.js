@@ -887,8 +887,10 @@ console.log(prices);
 
 let [first2, second2, ...rest2] = anodaFile
 console.log(first2); //json
-console.log(rest2[0]); //css
+console.log(rest2); //css, django
 
+
+// Friday 11th May 2023
 // setTimeout(callback, timeOut)
 console.log('/////////');
 
@@ -951,16 +953,27 @@ doPromise
 // fetch using promises
 // fetch using async await
 
-const url = 'https://restcountries.com/v2/all'
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => console.error(error))
+// const url = 'https://restcountries.com/v2/all'
+// fetch(url)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data)
+//   })
+//   .catch(error => console.error(error))
 
-
-
+// To get specified number of countries
+  const url = 'https://restcountries.com/v2/all';
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const numberOfItems = 20; // Specify the desired number of items
+      
+      // Use slice() to extract only the specified number of items
+      const slicedData = data.slice(10, numberOfItems);
+      slicedData.forEach(item =>console.log(`${item.name}(${item.cioc}) Population: ${item.population}`));
+    })
+    .catch(error => console.error(error));
+  
 
 
 
