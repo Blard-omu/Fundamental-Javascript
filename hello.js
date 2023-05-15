@@ -952,6 +952,7 @@ doPromise
 // Fetch API
 // fetch using promises
 // fetch using async await
+// axios
 
 // const url = 'https://restcountries.com/v2/all'
 // fetch(url)
@@ -963,20 +964,69 @@ doPromise
 
 // To get specified number of countries
   const url = 'https://restcountries.com/v2/all';
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const numberOfItems = 20; // Specify the desired number of items
+  const li = document.querySelector('#con')
+
+//   fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       const numberOfItems = 10; // Specify the desired number of items
       
-      // Use slice() to extract only the specified number of items
-      const slicedData = data.slice(10, numberOfItems);
-      slicedData.forEach(item =>console.log(`${item.name}(${item.cioc}) Population: ${item.population}`));
-    })
-    .catch(error => console.error(error));
-  
+//       // Use slice() to extract only the specified number of items
+//       const slicedData = data.slice(0, numberOfItems);
+//       console.log(slicedData);
+//       slicedData.forEach(item =>{
+//         console.log(`${item.name}(${item.cioc}) Population: ${item.population}`)
+//         li.innerHTML += `<li><strong>${item.name}</strong> (${item.cioc})  <strong>Population:</strong> ${item.population}</li>`
+//     });
+//     })
+//     .catch(error => console.error(error));
+
+// Using async await
+async function getFirstTen(start, end) {
+    const response = await fetch(url);
+    const data = await response.json();
+    // console.log(data);
+    const firstTen = data.slice(start, end)
+    console.log(firstTen);
+}
+
+getFirstTen(0, 10) // page 1
+getFirstTen(10, 20) // page 2
+
+
+// 
+const url1 = 'https://open-weather13.p.rapidapi.com/city/landon';
+const options1 = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '11286476camsh21a72f9ea6e55bep1d8d3djsnab0b968b2894',
+		'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url1, options1);
+	const result = await response.json();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
 
 
 
+const url2 = 'https://open-weather13.p.rapidapi.com/city/fivedaysforcast/30.438/-89.1028';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '11286476camsh21a72f9ea6e55bep1d8d3djsnab0b968b2894',
+		'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
+	}
+};
 
-
-
+try {
+	const response = await fetch(url2, options);
+	const result = await response.json();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
