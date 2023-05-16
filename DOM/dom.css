@@ -1,0 +1,13 @@
+.my-div{
+    width: 250px;
+    padding: 20px;
+    background-color: aqua;
+    color: black;
+}
+.my-div2{
+    width: 250px;
+    padding: 20px;
+    background-color: tomato;
+    color: white;
+    font-size: 24px;
+}
