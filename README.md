@@ -21,6 +21,7 @@
 - Date Methods: Date.getDate, Date.getFullYear(), Date.getMonth(), Date.getDay(), Date.getHours(), Date.getMinutes, etc.
 - OOP: Classes, constructor function, prototype inheritance, etc.
 - DOM: selecting DOM elements, changing DOM properties, creating DOM elements, event listener, etc.
+- LocalStorage
 - Project 1
 - Project 2
 
